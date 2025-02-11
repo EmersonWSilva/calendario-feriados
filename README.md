@@ -1,5 +1,5 @@
-```md
-# Calendário de Feriados
+md
+## Calendário de Feriados
 
 Aplicação **React** que exibe os feriados nacionais brasileiros, consumindo dados da [BrasilAPI](https://brasilapi.com.br/). O layout apresenta três colunas separadas:
 
@@ -38,7 +38,7 @@ Aplicação **React** que exibe os feriados nacionais brasileiros, consumindo da
 
 ## Estrutura Simplificada
 
-```css
+## css
 src/
 ├─ components/
 │  ├─ Title.jsx
