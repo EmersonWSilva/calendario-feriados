@@ -1,0 +1,132 @@
+/* Reset e estilo geral */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #2e2e2e;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Controles de entrada e botão */
+.controls {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.controls label {
+  font-weight: bold;
+}
+
+.controls input {
+  width: 100px;
+  padding: 5px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+}
+
+.controls button {
+  padding: 6px 12px;
+  background-color: #ff3300;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #fff;
+  font-weight: bold;
+}
+
+.controls button:hover {
+  background-color: #cc2900;
+}
+
+.status {
+  text-align: center;
+}
+
+.status.error {
+  color: #f66;
+}
+
+/* Seção que comporta as 3 “colunas” */
+.table-section {
+  display: flex;
+  gap: 1rem;   /* espaço entre colunas */
+  flex-wrap: wrap; /* se a tela ficar pequena, empilha */
+  justify-content: center; /* centraliza horizontalmente */
+}
+
+/* Card básico */
+.table-card {
+  flex: 1 1 250px;  /* cada card tem min. 250px, cresce e encolhe */
+  background: #fff; /* fundo branco */
+  color: #000;      /* texto preto dentro do card */
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  /* Se quiser que todo o texto dentro do card fique centralizado,
+     você pode adicionar: text-align: center; aqui também. */
+}
+
+/* Cabeçalho do card */
+.table-header {
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  color: #fff; /* cor do texto no header */
+}
+
+/* Corpo do card */
+.table-body {
+  padding: 10px;
+}
+
+/* Cada “linha” */
+.table-row {
+  background: #f9f9f9;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  text-align: center;  /* CENTRALIZA TODO O TEXTO DENTRO DAS "LINHAS" */
+}
+
+/* Classes para cada coluna, definindo a cor do cabeçalho */
+.theme-red .table-header {
+  background: #b52b2b;
+}
+
+.theme-orange .table-header {
+  background: #e27d2c;
+}
+
+.theme-yellow .table-header {
+  background: #e4b72d;
+}
+
+/* Ajustes específicos para texto dentro das “linhas” */
+.table-row .row-date,
+.table-row .row-name,
+.table-row .row-weekday {
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-bottom: 4px;
+  color: #333;
+}
