@@ -37,7 +37,12 @@ function App() {
   };
 
   // Funções para extrair valores:
-  const getDataValue = (feriado) => feriado.date;
+  const getDataValue = (feriado) => {
+    // "2025-09-23" -> ["2025", "09", "23"]
+    const [year, month, day] = feriado.date.split("-");
+    // Retorno no formato dia-mês-ano
+    return `${day}-${month}-${year}`;
+  };
   const getNameValue = (feriado) => feriado.name;
   const getWeekdayValue = (feriado) => {
     const dataObj = new Date(feriado.date);
