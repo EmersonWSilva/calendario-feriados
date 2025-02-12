@@ -1,0 +1,48 @@
+.calendario-anual {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 colunas, 3 linhas, total 12 */
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.mes-card {
+  background-color: #fff;
+  color: #000;
+  border-radius: 8px;
+  padding: 10px;
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+}
+
+.mes-titulo {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.dias-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  justify-content: center; /* centraliza os dias */
+}
+
+.dia {
+  width: 32px;
+  height: 32px;
+  background-color: #f2f2f2;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  cursor: default;
+}
+
+/* Se for feriado, marcamos com círculo colorido */
+.dia.feriado {
+  background-color: #ff3300;
+  color: #fff;
+  border-radius: 50%; /* vira um círculo */
+}

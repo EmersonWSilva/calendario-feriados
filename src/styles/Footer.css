@@ -1,8 +1,11 @@
-/* src/components/Footer.css */
 .footer {
+  position: fixed;
+  bottom: 0;          /* fixa na base da tela */
+  left: 0;
+  width: 100%;        /* ocupa toda a largura */
+  background-color: #333;
+  color: #fff;
   text-align: center;
-  margin-top: 20px;
-  color: #ccc;
-  font-size: 0.9rem;
-  opacity: 0.8;
+  padding: 10px;
+  z-index: 999;       /* garante ficar acima de outros elementos, se precisar */
 }
