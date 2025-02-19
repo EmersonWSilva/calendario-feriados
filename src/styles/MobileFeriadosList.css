@@ -1,0 +1,51 @@
+.mobile-list {
+  display: none; /* só aparece no mobile via media query */
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 0 10px;
+}
+
+/* Cabeçalho laranja (como a coluna de feriados do desktop) */
+.mobile-list-header {
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+  background-color: #e27d2c; /* cor laranja do desktop */
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Cada feriado -> “card” */
+.mobile-item {
+  background: #fff;    /* fundo branco */
+  color: #000;         /* texto preto */
+  border-radius: 8px;
+  margin-bottom: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;            /* espaço entre linhas */
+  text-align: center;  /* centralizado */
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2); /* leve sombra, opcional */
+}
+
+/* Cada campo (data, nome, weekday) - você pode customizar se quiser borda etc. */
+.mobile-data,
+.mobile-name,
+.mobile-weekday {
+  background: #f3f3f3;  /* cinza clarinho, se quiser destacar */
+  color: #000;
+  border-radius: 4px;
+  padding: 8px;
+}
+
+/* MEDIA QUERY: mostra .mobile-list no mobile, esconde a .table-section */
+@media (max-width: 768px) {
+  .table-section {
+    display: none !important;
+  }
+  .mobile-list {
+    display: block;
+  }
+}

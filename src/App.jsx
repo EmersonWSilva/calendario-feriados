@@ -6,6 +6,7 @@ import ColumnCard from './components/ColumnCard';
 import Title from './components/Title';
 import Footer from './components/Footer';
 import CalendarioAnual from './components/CalendarioAnual'; // Import do novo componente
+import MobileFeriadosList from './components/MobileFeriadosList';
 import './styles/App.css';
 
 function App() {
@@ -90,6 +91,13 @@ function App() {
               getDisplayValue={getWeekdayValue}
             />
           </div>
+
+          {/* Versão Mobile */}
+          <MobileFeriadosList
+            feriados={feriados}
+            getDisplayValue={getDataValue}
+            getWeekdayValue={getWeekdayValue}
+          />
         </>
       )}
 
