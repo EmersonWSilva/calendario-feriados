@@ -1,48 +1,84 @@
 .calendario-anual {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 colunas, 3 linhas, total 12 */
+  grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
   margin-top: 2rem;
+  justify-items: center; /* centraliza cada .mes-card horizontalmente */
+}
+
+/* Em telas até 992px (por exemplo), mostra 2 colunas */
+@media (max-width: 992px) {
+  .calendario-anual {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Em telas bem pequenas (até 600px), fica 1 coluna (vertical) */
+@media (max-width: 600px) {
+  .calendario-anual {
+    grid-template-columns: 1fr;
+  }
 }
 
 .mes-card {
-  background-color: #fff;
-  color: #000;
+  background-color: #333;
+  color: #fff;
   border-radius: 8px;
   padding: 10px;
-  min-height: 150px;
-  display: flex;
-  flex-direction: column;
+  width: 220px; /* Ajuste conforme quiser */
 }
 
 .mes-titulo {
-  text-align: center;
   font-weight: bold;
   margin-bottom: 8px;
+  text-align: center;
 }
 
-.dias-container {
-  display: flex;
-  flex-wrap: wrap;
+/* Cabeçalho dos dias da semana (D, S, T, Q, Q, S, S) */
+.dias-header {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
   gap: 4px;
-  justify-content: center; /* centraliza os dias */
+  margin-bottom: 4px;
 }
 
-.dia {
-  width: 32px;
-  height: 32px;
-  background-color: #f2f2f2;
+.dia-header {
+  background: #444;
+  text-align: center;
+  padding: 4px;
   border-radius: 4px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.9rem;
-  cursor: default;
+  font-weight: bold;
 }
 
-/* Se for feriado, marcamos com círculo colorido */
-.dia.feriado {
+/* Grade de dias (linhas = semanas) */
+.dias-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.semana-row {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+}
+
+.dia-cell {
+  background: #eee;
+  color: #000;
+  text-align: center;
+  border-radius: 4px;
+  padding: 4px;
+}
+
+.dia-cell.empty {
+  background: transparent;
+}
+
+/* Se for feriado, deixa o círculo vermelho */
+.dia-cell.feriado {
   background-color: #ff3300;
   color: #fff;
-  border-radius: 50%; /* vira um círculo */
+  border-radius: 50%;
+  cursor: default;
 }
